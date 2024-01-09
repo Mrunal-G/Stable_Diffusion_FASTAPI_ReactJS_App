@@ -18,7 +18,8 @@ app.add_middleware(
 )
 
 device = "cuda"
-model_id = "CompVis/stable-diffusion-v1-4"
+# model_id = "CompVis/stable-diffusion-v1-4"
+model_id = "wavymulder/wavyfusion"
 pipe = StableDiffusionPipeline.from_pretrained(model_id, revision="fp16", torch_dtype=torch.float16, use_auth_token=auth_token)
 pipe.to(device)
 
